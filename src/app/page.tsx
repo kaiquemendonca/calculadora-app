@@ -3,7 +3,7 @@ import DailyCalculator from './components/DailyCalculator'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 p-6">
+    <main className="min-h-screen bg-gray-50 p-6 text-black">
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-center text-blue-600">
           Calculadora de Corridas de App
