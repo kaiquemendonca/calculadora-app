@@ -15,7 +15,7 @@ export default function DailyCalculator() {
     <div className="bg-white rounded-2xl shadow p-6">
       <h2 className="text-xl font-bold mb-4 text-green-600">Lucro Diário</h2>
 
-      <div className="space-y-2">
+      <div className="space-y-2 grid grid-cols-2 sm:grid-cols-1 gap-4">
         <Input label="Preço da gasolina (R$/L)" value={gasPrice} onChange={setGasPrice} />
         <Input label="Consumo médio (km/L)" value={consumption} onChange={setConsumption} />
         <Input label="Valor recebido no dia (R$)" value={earnToday} onChange={setEarnToday} />

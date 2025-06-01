@@ -17,23 +17,21 @@ export default function MetaCalculator() {
   }
 
   const metaNormal = calcMeta()
-  const metaPlus = calcMeta(2000)
 
   return (
     <div className="bg-white rounded-2xl shadow p-6">
       <h2 className="text-xl font-bold mb-4 text-blue-600">Meta Mensal</h2>
 
-      <div className="space-y-2">
+      <div className="space-y-2 grid grid-cols-2 sm:grid-cols-1 gap-4">
         <Input label="Preço da gasolina (R$/L)" value={gasPrice} onChange={setGasPrice} />
         <Input label="Consumo médio (km/L)" value={consumption} onChange={setConsumption} />
         <Input label="Valor recebido por km (R$)" value={earnPerKm} onChange={setEarnPerKm} />
-        <Input label="Despesas fixas mensais (R$)" value={monthlyCosts} onChange={setMonthlyCosts} />
         <Input label="Dias trabalhados na semana" value={daysPerWeek} onChange={setDaysPerWeek} />
+        <Input label="Meta mensal (R$)" value={monthlyCosts} onChange={setMonthlyCosts} />
       </div>
 
       <div className="mt-4 space-y-2">
-        <Result label="Pagar despesas" daily={metaNormal.daily} weekly={metaNormal.weekly} />
-        <Result label="Despesas + 2000 lucro" daily={metaPlus.daily} weekly={metaPlus.weekly} />
+        <Result label="Meta" daily={metaNormal.daily} weekly={metaNormal.weekly} />
       </div>
     </div>
   )
